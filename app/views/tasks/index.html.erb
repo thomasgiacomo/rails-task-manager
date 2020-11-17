@@ -1,0 +1,15 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+
+      <% if task.completed %>
+        <p>[X]</p>
+      <% else %>
+        <p>[ ]</p>
+      <% end %>
+      <%= link_to task.title, task_path(task) %>
+    </li>
+
+  <%end %>
+</ul>
+
